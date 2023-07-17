@@ -49,7 +49,7 @@ const { width, cwd } = (() => {
         fs.mkdirSync(`${out}/${folder}`)
     })
 
-    const images = await glob('**/*.{png,jpeg,jpg}', { cwd })
+    const images = await glob('**/*.{png,jpeg,jpg,webp}', { cwd })
 
     console.log('Resizing files...')
     await Promise.all(images.map(async image => {
